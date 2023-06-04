@@ -1,0 +1,102 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Forms {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <main>
+        {% include 'includes/preloader.html' %}
+        <!-- Hero -->
+        <div class="section-header pb-6 bg-primary text-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 text-center">
+                        <h1 class="display-3 mb-4">PREDIKSI</h1>
+                        <p class="lead mb-5">OQQ (Ore Quality Quantifier)</p>
+                        <div class="alert bg-secondary" role="alert">
+                            <span class="fas fa-info-circle"></span>
+                            <a class="fw-bold text-white text-underline mx-1" href="/ui-forms" target="_blank">Pastikan Mengisi Formulir Dengan Benar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- ... -->
+        </div>
+
+        <!-- Section -->
+        <div class="section section-md pt-4">
+            <div class="container">
+                <form action="/predict" method="POST">
+                    <div class="row mb-4 mb-lg-5">
+                        <!-- Form -->
+                        <div class="form-group">
+                            <!-- ... -->
+                            <label class="h6" for="Tanggal">Pilih Tanggal</label>
+                             <div class="input-group mb-4">
+                                <span class="input-group-text" id="basic-addonDate1"><span
+                                            class="fas far fa-calendar-alt"></span></span>
+                                <input class="form-control" data-datepicker="" id="tanggal" name="tanggal" placeholder="Select date" required="required"
+                                type="text" aria-label="Date with icon left">
+                            </div>
+                        </div>
+                        </div>
+                        <!-- Form -->
+                        <div class="mb-3">
+                            <!-- ... -->
+                            <label for="exampleInputEmail6">Air Flow 267</label>
+                            <input type="number" min="0" value="" step="0.01" class="form-control" id="exampleInputEmail6" name="air_flow_267" placeholder="Dalam Angka" pattern="^\d*(\.\d{0,2})?$" required="required">
+                            <small id="emailHelp" class="form-text text-gray"><span class="fas fa-info-circle"></span> Aliran udara yang masuk ke sel flotasi diukur dalam Nm³/jam.</small>
+                            <!-- ... -->
+                        </div>
+                        <!-- End of Form -->
+                        <div class="mb-4">
+                            <!-- ... -->
+                            <label for="exampleInputEmail6">Float Level 47</label>
+                            <input type="number" min="0" value="" step="0.01" class="form-control" id="exampleInputEmail6" name="float_level_47" placeholder="Dalam Angka" pattern="^\d*(\.\d{0,2})?$" required="required">
+                            <small id="emailHelp" class="form-text text-gray"><span class="fas fa-info-circle"></span> Tingkat buih dalam sel flotasi diukur dalam mm (milimeter).</small>
+                            <!-- ... -->
+                        </div>
+                        <div class="mb-4">
+                            <!-- ... -->
+                            <label for="exampleInputEmail6">% Iron Feed%</label>
+                            <input type="number" min="0" value="" step="0.01" class="form-control" id="exampleInputEmail6" name="iron_feed" placeholder="Dalam Angka" pattern="^\d*(\.\d{0,2})?$" required="required">
+                            <small id="emailHelp" class="form-text text-gray"><span class="fas fa-info-circle"></span> Persentase Besi yang berasal dari bijih besi yang dimasukkan ke dalam sel flotasi.</small>
+                            <!-- ... -->
+                        </div>
+                        <div class="mb-4">
+                            <!-- ... -->
+                            <label for="exampleInputEmail6">Amina Flow</label>
+                            <input type="number" min="0" value="" step="0.01" class="form-control" id="exampleInputEmail6" name="amina_flow" placeholder="Dalam Angka" pattern="^\d*(\.\d{0,2})?$" required="required">
+                            <small id="emailHelp" class="form-text text-gray"><span class="fas fa-info-circle"></span> Amina (reagen) Aliran diukur dalam m3/jam.</small>
+                            <!-- ... -->
+                        </div>
+                        <div class="mb-4">
+                            <!-- ... -->
+                            <label for="exampleInputEmail6">Ore Pulp pH</label>
+                            <input type="number"  min="0" value="" step="0.01" class="form-control" id="exampleInputEmail6" name="ore_pulp_ph" placeholder="Dalam Angka" pattern="^\d*(\.\d{0,2})?$" required="required">
+                            <small id="emailHelp" class="form-text text-gray"><span class="fas fa-info-circle"></span> Aliran Pulp Bijih dalam t/h.</small>
+                            <!-- ... -->
+                        </div>
+                        <div class="mb-4">
+                            <!-- ... -->
+                            <label for="exampleInputEmail6">Ore Pulp Density</label>
+                            <input type="number"  min="0" value="" step="0.01" class="form-control" id="exampleInputEmail6" name="ore_pulp_density" placeholder="Dalam Angka" pattern="^\d*(\.\d{0,2})?$" required="required">
+                            <small id="emailHelp" class="form-text text-gray"><span class="fas fa-info-circle"></span> Skala kepadatan dari 1 hingga 3 kg/cm³.</small>
+                            <!-- ... -->
+                        </div>
+                        <div>
+                            <button type="submit" class="btn btn-primary">PREDIKSI</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

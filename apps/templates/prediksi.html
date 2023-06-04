@@ -1,0 +1,163 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Forms {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    <main>
+        {% include 'includes/preloader.html' %}
+        <!-- Hero -->
+        <div class="section-header pb-6 bg-primary text-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    {% if result %}
+                    <div class="col-12 col-md-8 text-center">
+                        <h1 class="display-3 mb-4">Hasil PREDIKSI</h1>
+                        <h1 class="lead mb-5">{{ result }} %</h1>
+                        <div class="alert bg-secondary" role="alert">
+                            <span class="fas fa-info-circle"></span>
+                            <a class="fw-bold text-white text-underline mx-1" href="/ui-forms">Prediksi Kembali</a>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+            <!-- ... -->
+        </div>
+        <div class="section section-md pt-4">
+            <div class="container">
+                <div class="row mb-4 mb-lg-5">
+
+                    <div class="section section-sm pb-0 mb-n4">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <h3 class="text-center">Keterangan Prediksi</h3>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Section -->
+                    <div class="section section-md">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12 col-md-10 col-lg-8">
+                                    <!-- Tab Nav -->
+                                    <div class="nav-wrapper position-relative mb-2">
+                                        <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-text" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-text-1-tab" data-bs-toggle="tab"
+                                                    href="#tabs-text-1" role="tab" aria-controls="tabs-text-1" aria-selected="true">Persentase < 2 %</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-2-tab" data-bs-toggle="tab"
+                                                    href="#tabs-text-2" role="tab" aria-controls="tabs-text-2"
+                                                    aria-selected="false">Persentase 2 - 4 %</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link mb-sm-3 mb-md-0" id="tabs-text-3-tab" data-bs-toggle="tab"
+                                                    href="#tabs-text-3" role="tab" aria-controls="tabs-text-3"
+                                                    aria-selected="false">Persentase > 4 %</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- End of Tab Nav -->
+                                    <!-- Tab Content -->
+                                    <div class="card border-0">
+                                        <div class="card-body p-0">
+                                            <div class="tab-content" id="tabcontent1">
+                                                <div class="tab-pane fade show active" id="tabs-text-1" role="tabpanel"
+                                                    aria-labelledby="tabs-text-1-tab">
+                                                    <p><b>Hasil prediksi menunjukkan bahwa konsentrat bijih besi memiliki tingkat silika yang rendah.</b></p>
+                                                    <p>Tetap pertahankan kualitas produksi saat ini.</p>
+                                                </div>
+                                                <div class="tab-pane fade" id="tabs-text-2" role="tabpanel"
+                                                    aria-labelledby="tabs-text-2-tab">
+                                                    <p><b>Hasil prediksi menunjukkan bahwa konsentrat bijih besi memiliki tingkat silika yang sedang.</b></p>
+                                                    <p>Untuk mengurangi kandungan silika dalam proses produksi, peningkatan efisiensi proses flotasi dapat berperan penting. Parameter operasional seperti waktu flotasi, aliran udara dalam suatu unit, tingkat flotasi, persentase bijih besi, aliran amina, pH dan kepadatan pulp bijih dapat disesuaikan untuk mencapai hasil yang optimal.</p>
+                                                </div>
+                                                <div class="tab-pane fade" id="tabs-text-3" role="tabpanel"
+                                                    aria-labelledby="tabs-text-3-tab">
+                                                    <p><b>Hasil prediksi menunjukkan bahwa konsentrat bijih besi memiliki tingkat silika yang tinggi.</b></p>
+                                                    <p>Lakukan peninjauan mendalam terhadap proses produksi dan identifikasi faktor penyebab kandungan silika yang tinggi. Beberapa cara yang bisa dilakukan seperti: </p>
+                                                    <P><b>1. Pengoptimalan Proses Penggilingan dan Penghancuran: </b>Proses ini memainkan peran penting dalam menentukan sejauh mana silika dapat dipisahkan dari bijih besi. Ukuran bijih yang tepat dapat meningkatkan efisiensi pemisahan.</p>
+                                                    <p><b>2. Pemulihan Ulang:</b> Proses pemulihan ulang dapat digunakan untuk memisahkan lebih lanjut silika dari bijih besi, setelah proses pengolahan utama.</p>
+                                                    <p><b>3. Mencari Sumber Bijih Alternatif:</b> Jika tingginya kandungan silika adalah hasil dari sifat bijih yang ditambang, mungkin perlu dipertimbangkan mencari sumber bijih alternatif yang memiliki kandungan silika yang lebih rendah.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- End of Tab Content -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Section -->
+            
+                    
+                    <!-- Form -->
+                    <form action="/submit_feedback" method="post">
+                        <div class="mb-3 d-flex align-items-center justify-content-center">
+                            <div class="w-50">
+                                <h4 label for="exampleFormControlTextarea1">Feedback</label></h4>
+                                <textarea class="form-control feedback-input" name="message" placeholder="Kirimkan masukan untuk program ini..." id="exampleFormControlTextarea1" rows="4"></textarea>
+                                <p></p>
+                                <div>
+                                    <button class="btn btn-outline-primary" type="submit">
+                                        <span class="me-1"><span class="far fa-comment"></span></span>
+                                        KIRIM MASUKKAN
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End of Form -->
+                    <div class="d-flex justify-content-center align-items-center mb-5">
+                        <a href="ui-forms" class="btn btn-tertiary mb-3 mt-2 me-2 me-md-3 animate-up-2"><span
+                            class="fa fa-refresh" aria-hidden="true"></span> <span class="d-none d-md-inline">Mulai Prediksi Kembali</span> <span class="d-md-none">Components</span></a>
+                    </div>
+                    
+                    <!-- Modal -->
+                    <div class="modal fade" id="modal-notification" tabindex="-1" aria-labelledby="modal-notification-label"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                            <div class="modal-content bg-primary text-white">
+                                <div class="modal-header border-0">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="py-3 text-center">
+                                        <span class="modal-icon display-1-lg"><span
+                                                class="far fa-envelope-open"></span></span>
+                                        <h2 class="h4 modal-title my-3">Terima Kasih Atas Tanggapan Anda</h2>
+                                        <p class="px-lg-5">Masukan Anda telah berhasil dikirimkan.</p>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Script to show modal if success parameter is true -->
+                    {% if success %}
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                var modal = new bootstrap.Modal(document.getElementById('modal-notification'));
+                                modal.show();
+                            });
+                        </script>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

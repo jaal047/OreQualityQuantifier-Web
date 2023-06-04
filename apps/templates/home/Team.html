@@ -1,0 +1,155 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Contact {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+    <main>
+        
+        {% include 'includes/preloader.html' %}
+
+        <!-- Hero -->
+        <section class="section section-header pb-11 bg-primary text-white">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-xl-8 text-center">
+                        <h1 class="display-2 mb-3">Tentang Kami</h1>
+                        <p class="lead"></p>        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section -->
+        <div class="section py-0">
+            <div class="container mt-n10">
+                <div class="row">
+                    <div class="col-12">
+                        <iframe class="map rounded" id="gmap_canvas" src="https://maps.google.com/maps?q=Gedung%20Kuliah%20Bersama%20(GKB)%20UNAIR%20Kampus%20C&t=&z=17&ie=UTF8&iwloc=&output=embed"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section -->
+        <section class="section section-lg pt-6">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2>Tim Pengembang</h2>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="card border-0 text-center">
+                            <div class="card-header border-0 bg-white">
+                                <img src="/static/assets/img/team/Rijal.jpeg" class="card-img-top rounded shadow border-0" alt="Christopher Avatar" style="width: 300px; height: 350">
+                            </div>
+                            <div class="card-body">
+                                <span class="card-subtitle text-gray fw-normal">162012133030</span>
+                                <h3 class="h4 card-title mt-2">Rijal Akhdan Khairulah</h3>
+                                <ul class="list-unstyled d-flex justify-content-center mt-3">
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/rijal-akhdan" target="_blank" aria-label="linkedin social link" class="icon icon-sm icon-facebook me-3">
+                                            <span class="fab fa-linkedin-in"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/jaal047" target="_blank" aria-label="github social link" class="icon icon-sm icon-twitter me-3">
+                                            <span class="fab fa-github"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:rijal.akhdan.khairullah@gmail.com" target="_blank" aria-label="Email social link" class="icon icon-sm icon-slack me-3">
+                                            <span class="far fa-envelope"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/JAAAL20" target="_blank" aria-label="dribbble social link" class="icon icon-sm icon-dribbble me-3">
+                                            <span class="fab fa-telegram"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="card border-0 text-center">
+                            <div class="card-header border-0 bg-white">
+                                <img src="/static/assets/img/team/nanda.jpg" class="card-img-top rounded shadow border-0" alt="Christopher Avatar" style="width: 300px; height: 350">
+                            </div>
+                            <div class="card-body">
+                                <span class="card-subtitle text-gray fw-normal">162012133023</span>
+                                <h3 class="h4 card-title mt-2">Nanda Hasudungan SImatupang</h3>
+                                <ul class="list-unstyled d-flex justify-content-center mt-3">
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/nandasimatupang" target="_blank" aria-label="linkedin social link" class="icon icon-sm icon-facebook me-3">
+                                            <span class="fab fa-linkedin-in"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/nandas-simatupang" target="_blank" aria-label="github social link" class="icon icon-sm icon-twitter me-3">
+                                            <span class="fab fa-github"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:nandasimatupang2002@gmail.com" target="_blank" aria-label="Email social link" class="icon icon-sm icon-slack me-3">
+                                            <span class="far fa-envelope"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/nandasimatupang" target="_blank" aria-label="dribbble social link" class="icon icon-sm icon-dribbble me-3">
+                                            <span class="fab fa-telegram"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 mb-5 mb-lg-0">
+                        <div class="card border-0 text-center">
+                            <div class="card-header border-0 bg-white">
+                                <img src="/static/assets/img/team/komang.jpg" class="card-img-top rounded shadow border-0" alt="Christopher Avatar">
+                            </div>
+                            <div class="card-body">
+                                <span class="card-subtitle text-gray fw-normal">162012133072</span>
+                                <h3 class="h4 card-title mt-2">Komang Budi Anggara</h3>
+                                <ul class="list-unstyled d-flex justify-content-center mt-3">
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/komang-budi-anggara-92a751185" target="_blank" aria-label="linkedin social link" class="icon icon-sm icon-facebook me-3">
+                                            <span class="fab fa-linkedin-in"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/kmbudi" target="_blank" aria-label="github social link" class="icon icon-sm icon-twitter me-3">
+                                            <span class="fab fa-github"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:komang.budi.anggara-2020@ftmm.unair.ac.id" target="_blank" aria-label="Email social link" class="icon icon-sm icon-slack me-3">
+                                            <span class="far fa-envelope"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://t.me/budiianggara" target="_blank" aria-label="dribbble social link" class="icon icon-sm icon-dribbble me-3">
+                                            <span class="fab fa-telegram"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End of section -->
+
+    </main>
+
+    {% include 'includes/footer.html' %}
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
